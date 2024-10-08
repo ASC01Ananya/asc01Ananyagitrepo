@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    width: 50%;
+    align-content: center;
+    background-color: lavenderblush;
+    border-radius: 20px;
+    margin-left: 25%;
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+
+}
+
+.range {
+    accent-color: pink;
+}
+
+.logo {
+    /* padding: 10px;
+    width: 100px; */
+    margin-left: 400px;
+    margin-top: -30px;
+    border-radius: 20px;
+    ;
+}
+
+.heading {
+    padding: 40px 0px 0px 20px;
+}
+
+.form {
+    /* border: 10px; */
+    padding: 20px;
+}
+
+label {
+    padding: 10px;
+}
+
+.media {
+    padding: 20px;
+}
+
+.btn {
+    background-color: pink;
+    border-radius: 10%;
+    border-color: aliceblue;
+    border-style: solid;
+    padding: 5px;
+}
+
+#finish {
+    background-color: pink;
+    border-radius: 10%;
+    border-color: aliceblue;
+    border-style: solid;
+    padding: 5px;
+}
+
+P {
+    color: pink;
+    background: lavenderblush;
+
+}
+
+.sub-container {
+    padding: 10px;
+    border: solid 2px;
+}
+
+.headings {
+    color: red;
+}
