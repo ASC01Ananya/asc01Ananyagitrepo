@@ -10,9 +10,11 @@
     background-color: lavenderblush;
     border-radius: 20px;
     margin-left: 25%;
+
+    /* display: flex; */
     /* text-align: center; */
     /* display: flex; */
-    /* justify-content: center; */
+    justify-content: center;
 
 }
 
@@ -20,17 +22,35 @@
     accent-color: pink;
 }
 
+.image-container {
+    margin: 30px;
+}
+
 .logo {
-    /* padding: 10px;
-    width: 100px; */
-    margin-left: 400px;
-    margin-top: -30px;
     border-radius: 20px;
-    ;
+}
+
+.header {
+    display: flex;
 }
 
 .heading {
     padding: 40px 0px 0px 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+input[type="date"] {
+    width: 70%;
+    margin-left: 43px;
+}
+/* DOUBT it works with id but not as for as it is element   ....i.e #address ==margin is applied 
+but if textarea is used...it doesn't work */
+#address {
+    width: 70%;
+    margin-left: 22px;
 }
 
 .form {
@@ -42,9 +62,7 @@ label {
     padding: 10px;
 }
 
-.media {
-    padding: 20px;
-}
+
 
 .btn {
     background-color: pink;
@@ -53,7 +71,11 @@ label {
     border-style: solid;
     padding: 5px;
 }
-
+.btns{
+    border: solid;
+    padding: 5px;
+    background-color: lavenderblush;
+}
 #finish {
     background-color: pink;
     border-radius: 10%;
@@ -75,4 +97,8 @@ P {
 
 .headings {
     color: red;
+}
+#yt{
+    width: 300px;
+    padding: 10px;
 }

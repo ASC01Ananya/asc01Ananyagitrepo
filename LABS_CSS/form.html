@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script>
+    function fun(){
+        alert("Sumbited");
+    }
+</script>
+    </head>
+
+<body>
+    <style>
+        p {
+            color: palegreen;
+        }
+    </style>
+    <div class="main-container">
+        <div class="header">
+            <h2 class="heading">Register Here ASCENDERS!</h2>
+            <div class="image-container"><img class="logo"
+                    src="data:image/jpeg;base64,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"
+                    alt="logo"></div>
+        </div>
+
+
+        <form action="" class="form">
+            <label for="name">First Name :</label>
+            <input style="color: black; background-color:rgb(255, 240, 252);" type="text" name="name" id="name">
+            <br><br>
+
+            <label for="lname">Last Name :</label>
+            <input style="color: blue; background-color:pink;" type="text" name="lname" id="lname">
+            <br><br>
+
+            <label for="dateofbirth">DOB :</label>
+            <input type="date" name="dob" id="dateofbirth">
+            <br><br>
+
+            <label for="address">Address :</label>
+            <textarea cols="8" rows="3" name="address" id="address"></textarea>
+            <br><br>
+
+            <label for="beverage">Your favorite beverage :</label>
+            <input type="checkbox" name="beverage" id="beverages_tea" value="Tea"> Tea
+            <input type="checkbox" name="beverage" id="beverages_coffee" value="Coffee"> Coffee
+            <br><br>
+
+            <label for="gender">Your Gender :</label>
+            <input type="radio" name="gender" id="gender_female" value="Female"> Female
+            <input type="radio" name="gender" id="gender_male" value="Male"> Male
+            <br><br>
+
+            <label for="range">Rate your JS Skill :</label>
+            <input class="range" type="range" name="js_skill" id="range">
+            <br><br>
+
+            <label for="payment">Payment mode :</label>
+            <select name="payment" id="payment">
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+            </select>
+            <br><br>
+
+            <input type="submit" name="finish" id="finish" value="Finish" onclick='fun()'>
+            <input type="reset" name="reset" class="btn" value="Reset">
+        </form>
+
+        <h3 class="heading">Know More ABOUT US!!!</h3> 
+        <br><br>
+        <!-- Uncomment if you want to display the video -->
+        <button class="btns" onclick="ab()">About US</button>
+        <button class="btns"onclick="ava()">About Ava</button><br>
+        <div id="yt"> <iframe class="media" width="620px" height="400px" src="https://www.youtube.com/embed/Ir-5m7LESzs"
+            title="AI-Driven Innovation Starts Here" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+       
+    </div>
+
+    <div class="display">
+        <table>
+            <th>Ascenders Details</th>
+            <tr>
+                <td>NAME :</td>
+                <td id="namei"></td>
+            </tr>
+            <tr>
+                <td>DOB :</td>
+                <td id="date"></td>
+            </tr>
+            <tr>
+                <td>Address :</td>
+                <td id="addressi"> </td>
+            </tr>
+            <tr>
+                <td>Beverage :</td>
+                <td id="beverages"> </td>
+            </tr>
+            <tr>
+                <td>Gender :</td>
+                <td id="gender"></td>
+            </tr>
+            <tr>
+                <td>
+                    payment mode:
+                </td>
+                <td id="pay"> </td>
+            </tr>
+
+        </table>
+
+        <!-- <p>NAME : <span id="namei">[Your Name Here]</span></p> -->
+    </div>
+
+<br><br><br>
+    <div class="sub-container day2">
+        <h4 class="headings">Experimenting on priority order of styling where <br>1) In-Line <br>2) Internal <br> 3)
+            External</h4>
+        <br><br>
+        <p style="color: blueviolet;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi obcaecati ut
+            aspernatur amet odio iste, animi sapiente illo placeat voluptate error facilis enim exercitationem cum non
+            ipsam! Dolores, recusandae quia!
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam modi minima libero similique architecto
+            necessitatibus soluta, provident illo maxime optio aliquid, autem nulla nobis iste laborum perferendis vero
+            impedit vel!
+        </p>
+    </div>
+    <br><br>
+    <div class="sub-container day3">
+        <p>class on JS</p>
+        <!-- DOUBT === which external would be called ,,,whether from internal or extrnal!!!!!  external was called  but why?????-->
+       
+    </div>
+    <script>
+        function internal(){
+            console.log("IN Internal");
+        }
+        internal();
+    </script>
+     <button onclick="internal()">ckeck the scripts </button>
+    <script src="form.js"></script>
+</body>
+
+
+
+</html>
