@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
 .main-container {
     width: 50%;
     align-content: center;
@@ -48,9 +52,13 @@ input[type="date"] {
 }
 /* DOUBT it works with id but not as for as it is element   ....i.e #address ==margin is applied 
 but if textarea is used...it doesn't work */
-#address {
+
+/* BOOTSTRAP as some default stylings for input select element */
+#address{
+    /* position: absolute; */
     width: 70%;
     margin-left: 22px;
+    overflow: hidden;
 }
 
 .form {
@@ -75,6 +83,7 @@ label {
     border: solid;
     padding: 5px;
     background-color: lavenderblush;
+    margin: 10px;
 }
 #finish {
     background-color: pink;
@@ -99,6 +108,12 @@ P {
     color: red;
 }
 #yt{
-    width: 300px;
-    padding: 10px;
+    width: 250px;
+    /* padding: 10px; */
+}
+
+.display{
+    padding: 30px;
+    width: 30%;
+
 }
