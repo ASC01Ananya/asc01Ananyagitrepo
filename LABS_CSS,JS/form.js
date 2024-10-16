@@ -5,10 +5,10 @@ func();
 
 var el = document.getElementById("finish");
 el.addEventListener("click", (event) => {
-    console.log(event)
+    // console.log(event)
     event.preventDefault();
-    validateForm(); 
-// when placed outside the function name last name address and dob is not captured
+    validateForm();
+    // PS::::when placed outside the function name last name address and dob is not captured
     var nam = document.getElementById('name').value.trim();
     var lnam = document.getElementById('lname').value.trim();
     var dat = document.getElementById('dateofbirth').value.trim();
@@ -19,7 +19,7 @@ el.addEventListener("click", (event) => {
     var coffee = document.getElementById('beverages_coffee');
     var femaleElement = document.getElementById('gender_female');
     var maleElement = document.getElementById('gender_male');
-    
+
 
     var bev = [];
     if (tea && tea.checked) {
@@ -36,8 +36,7 @@ el.addEventListener("click", (event) => {
         gender = "Male";
     }
 
-    // Clear the table
-    // document.getElementById('tab').innerHTML = '';
+
 
     // Adding rows only if data is present
     if (nam) {
@@ -95,35 +94,18 @@ function validateForm() {
         return false;
     }
 
-    // Validate that at least one beverage is selected
-    if (!tea.checked && !coffee.checked) {
-        alert("Please select at least one beverage");
-        return false;
-    }
 
-    // Validate that a gender is selected
     if (!female.checked && !male.checked) {
         alert("Please select your gender");
         return false;
     }
 
-    // Validate JavaScript skill rating
-    if (jsSkill === "0") {
-        alert("Please rate your JavaScript skill");
-        return false;
-    }
 
     return true;
 }
 
-var reset=document.querySelector(".reset");
-reset.addEventListener("click",()=>
-{
-    document.querySelector("#tab").innerHTML=" ";
-});
+var reset = document.querySelector(".reset");
+reset.addEventListener("click", () => {
+    document.querySelector("#tab").innerHTML = " ";
+});       
 
-// Dynamically Capturing 
-var dfame=document.getElementById("name");
-dfame.addEventListener("change",()=>{
-    addRow('First Name :', dfame.value);
-})
