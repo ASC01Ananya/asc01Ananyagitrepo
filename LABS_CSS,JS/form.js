@@ -38,7 +38,6 @@ el.addEventListener("click", (event) => {
 
 
 
-    // Adding rows only if data is present
     if (nam) {
         addRow('First Name :', nam);
     }
