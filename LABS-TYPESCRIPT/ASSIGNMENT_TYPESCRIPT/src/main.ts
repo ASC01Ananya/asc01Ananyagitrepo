@@ -2,9 +2,9 @@ console.log("Welcome to UserManagement System!!!")
 import { userManager } from "./userManager"
 import { User } from "./users";
 const usermanager=new userManager;
-
+let id=1;
 const ananya:User={
-        id:1,
+        id:id++,
         firstname:"Ananya",
         lastname:"Raju",
         dateofbirth:new Date("2002-08-29"),
@@ -15,7 +15,7 @@ const ananya:User={
         payment:"Cash"
     }
 const amulya:User={
-    id:2,
+    id:id++,
     firstname:"Amulya",
     lastname:"Raju",
     dateofbirth:new Date("2005-05-01"),
@@ -26,7 +26,7 @@ const amulya:User={
     payment:"Card"
 }
 const raju:User={
-    id:3,
+    id:id++,
     firstname:"Raju",
     lastname:"Hanu",
     dateofbirth:new Date("1973-05-01"),
@@ -43,4 +43,6 @@ usermanager.addUser(raju);
 console.log(usermanager.listUsers());
 console.log(usermanager.searchUser(2));
 usermanager.removeUser(3);
+// console.log(--id);
+usermanager.addUser(raju);
 console.log(usermanager.listUsers());
