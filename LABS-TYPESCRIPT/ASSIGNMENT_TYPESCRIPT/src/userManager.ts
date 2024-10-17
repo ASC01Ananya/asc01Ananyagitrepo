@@ -24,12 +24,27 @@ export class userManager{
     }
 
     searchUser(id:number):User|undefined{
-        if(id==undefined)
-        {
-            console.log("Enter a coorect id");
-        }
+        
         return this.users.find(user =>user.id===id)
         // return this.users.filter(user=>this.user.id===id)
 
     }
+
+    updateUserName(id: number, label: "firstname" | "lastname", updatedValue: string): void {
+        let cur_user = this.users.find(user => user.id === id);
+        
+        if (cur_user) {
+            // Use bracket notation to update the property dynamically
+            cur_user[label] = updatedValue;
+            console.log("UPDATED!!!");
+        } else {
+            console.log("User not found!");
+        }
+    }
+    
+    beveragesCount(beverages:"Tea"|"Coffee")
+    {
+        return this.users.filter(user=> user.beverages === beverages).length
+    }
+    
 }	

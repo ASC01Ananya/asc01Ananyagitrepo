@@ -37,12 +37,20 @@ const raju:User={
     payment:"Card"
 }
 
+// adding the users
 usermanager.addUser(ananya);
 usermanager.addUser(amulya);
 usermanager.addUser(raju);
+// Display
 console.log(usermanager.listUsers());
+// searching the user
 console.log(usermanager.searchUser(2));
 usermanager.removeUser(3);
 // console.log(--id);
 usermanager.addUser(raju);
 console.log(usermanager.listUsers());
+// updating the name of the user
+usermanager.updateUserName(1,"lastname","RajRathna");
+console.log(usermanager.listUsers());
+// count the beverages selections
+console.log(usermanager.beveragesCount("Coffee"));
