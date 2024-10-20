@@ -6,8 +6,8 @@ export interface User{
     dateofbirth:Date;
     address:string;
     // optional property
-    beverages?:"Tea" | "Coffee";
-    gender:"Female" | "Male";
+    beverages?:string;
+    gender:string;
     // ? makes the property as optional
     jsskill?:number;
     payment:string;
