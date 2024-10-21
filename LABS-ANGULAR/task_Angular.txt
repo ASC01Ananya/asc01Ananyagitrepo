@@ -1,0 +1,23 @@
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `<table>
+    @for(user of users;track user.id)
+  {
+  <tr>
+  <td>{{user.name}}</td>
+  <td>{{user.id}}</td>
+  </tr>
+  }
+  </table>`,
+  standalone: true,
+  
+})
+export class AppComponent {
+  users =[{id: 0, name: 'Sarah'}, 
+	  {id: 1, name: 'Amy'}, 
+          {id: 2, name: 'Rachel'}, 
+          {id: 3, name: 'Jessica'}, 
+          {id: 4, name: 'Poornima'}];
+}
