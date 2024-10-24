@@ -80,3 +80,4 @@ femaleElement.addEventListener("change", () => {
 maleElement.addEventListener("change", () => {
     addOrUpdateRow('Gender :', femaleElement.checked ? "Female" : maleElement.checked ? "Male" : "");
 });
+
