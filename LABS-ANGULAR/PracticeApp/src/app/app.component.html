@@ -1,0 +1,33 @@
+<div class="container">
+  <h3>Users Details</h3>
+<table class="table  table-bordered table-striped" >
+  <thead class="table-dark">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Last Name</td>
+      <td>Date Of Birth</td>
+      <td>Beverage choice</td>
+      <td>Gender</td>
+      <td>JS Skill Range</td>
+      <td>Payment Mode</td>
+      <td>Address</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users"> 
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.lname}}</td>
+      <td>{{user.dob}}</td>
+      <td>{{user.beverage}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.js_skill}}</td>
+      <td>{{user.payment}}</td>
+      <td>{{user.address}}</td>
+    </tr>
+
+  </tbody>
+</table>
+<app-form></app-form>
+</div>

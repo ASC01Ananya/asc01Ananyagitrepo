@@ -1,0 +1,49 @@
+{
+    "users": [
+      {
+        "id":1,
+        "name": "Rathna",
+        "lname": "Raju",
+        "dob": "1973-01-09",
+        "address": "Dodballapur",
+        "beverage": "Tea",
+        "gender": "Female",
+        "js_skill": "40",
+        "payment": "Cash"
+      },
+      {
+        "id":2,
+        "name": "Ananya",
+        "lname": "Raju",
+        "dob": "2002-08-29",
+        "address": "Bangalore",
+        "beverage": " ",
+        "gender": "Female",
+        "js_skill": "90",
+        "payment": "Cash"
+      },
+      {
+        "id":3,
+        "name": "Amulya",
+        "lname": "Raju",
+        "dob": "2005-09-01",
+        "address": "Bangalore",
+        "beverage": "Coffee",
+        "gender": "Female",
+        "js_skill": "70",
+        "payment": "Card"
+      },
+      {
+        "id":4,
+        "name": "Amu",
+        "lname": "Raj",
+        "dob": "2015-09-29",
+        "address": "Chennai",
+        "beverage": "Tea",
+        "gender": "Female",
+        "js_skill": "70",
+        "payment": "Cash"
+      }
+    ]
+  }
+  

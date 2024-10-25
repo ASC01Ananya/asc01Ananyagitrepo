@@ -19,4 +19,4 @@
 - adding search functionality
 - updating the name of the user 
 ## Pending/Completed :100:
-COMPLETED
+COMPLETEDz
