@@ -1,1 +1,63 @@
-<p>form works!</p>
+<div class="container" style="width:500px">
+  <br>
+  <h2 style="text-align: center;">Add Employee Form</h2> <br>
+  <form [formGroup]="addForm" (ngSubmit)="saveUser()">
+    <div>
+      <div class="form-group">
+        <label for="id">Id :</label>
+        <input type="text" id="id" class="form-control" formControlName="id">
+      </div>
+      <div class="form-group">
+        <label for="name">Name :</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="lastname">lastname :</label>
+        <input type="text" id="salary" class="form-control" formControlName="lastname">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date Of birth :</label>
+        <input type="date" id="dob" class="form-control" formControlName="dob">
+      </div>
+      <div class="form-group">
+        <label for="address">Address :</label>
+        <input type="text" id="address" class="form-control" formControlName="address">
+      </div>
+      <div class="form-group">
+        <label for="beverages">Beverages:</label>
+        <select class="form-control" id="beverage" formControlName="beverage">
+          <option *ngFor="let option of beverageOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+
+      <div>
+        <label for="gender">Gender:</label><br>
+        <select class="form-control" id="gender" formControlName="gender">
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="js_skill">JavaScript Skill Range:</label> <br>
+        <input type="number" id="js_skill" class="form-control" formControlName="js_skill" />
+      </div>
+      <div>
+        <label for="payment">Payment Mode:</label>
+        <select class="form-control" id="payment" formControlName="payment">
+          <option value="Card">Card</option>
+          <option value="Cash">Cash</option>
+        </select>
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+
+    <button type="submit" class="btn btn-success" class="btn btn-dark ">Save</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-warning ">Clear</button>
+    <br><br>
+  </form>
+</div>

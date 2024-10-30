@@ -14,7 +14,7 @@
 export class User {
     id: number;
     name: string;
-    lname: string;
+    lastname: string;
     dob: Date;
     address?: string;
     beverage?: string;
@@ -24,7 +24,7 @@ export class User {
     constructor(
       id: number,
       name: string,
-      lname: string,
+      lastname: string,
       dob: Date,
       beverage: string,
       gender: string,
@@ -34,7 +34,7 @@ export class User {
     ) {
       this.id = id;
       this.name = name;
-      this.lname = lname;
+      this.lastname = lastname;
       this.dob = dob;
       this.beverage = beverage;
       this.gender = gender;
