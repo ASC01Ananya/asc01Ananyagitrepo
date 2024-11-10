@@ -1,0 +1,18 @@
+<p class="text-5xl font-bold font-mono mb-4">Register</p>
+<form [formGroup]="register" (ngSubmit)="onSubmit()" class="text-left bg-gray-100 p-6 rounded-lg shadow-lg">
+    <div class="mb-4">
+        <label for="registerid" class="block text-gray-700 font-bold mb-2">Admin Name:</label>
+        <input type="text" id="registerid" formControlName="name"
+            class="w-1/2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 "
+            [ngClass]="{'border-red-500': register.get('name')?.errors}">
+        <div *ngIf="register.get('name')?.errors" class="text-red-400 text-xl mt-2">
+            <p *ngIf="register.get('name')?.errors?.['required']">Name is required</p>
+        </div>
+    </div>
+
+    <button type="submit" class="bg-pink-300 p-3 m-3 rounded-lg">
+        Submit
+    </button>
+    <button type="reset" class="bg-slate-300 p-3 rounded-lg">Clear</button>
+
+</form>

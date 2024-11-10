@@ -1,0 +1,102 @@
+<div class="container" style="width:500px">
+  <br>
+  <h2 style="text-align: center;" class="font-mono text-5xl ">{{operation}} User</h2> <br>
+  <form class="text-left" [formGroup]="addForm" (ngSubmit)="saveUser()">
+    <div>
+      <div class="form-group">
+        <label for="id">Id :</label>
+        <input type="text" id="id" class="form-control" formControlName="id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name :</label>
+        <input type="text" id="name" class="form-control" formControlName="name"
+          [ngClass]="{'border-red-500': addForm.get('name')?.touched && addForm.get('name')?.invalid}">
+        <div *ngIf="addForm.get('name')?.touched && addForm.get('name')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('name')?.errors?.['required']">Name is required</p>
+        </div>
+        <div *ngIf="addForm.get('name')?.touched && addForm.get('name')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('name')?.errors?.['minlength']">Name should be of atleast of 3 characters</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Lastname :</label>
+        <input type="text" id="lastname" class="form-control" formControlName="lastname"
+          [ngClass]="{'border-red-500': addForm.get('lastname')?.touched && addForm.get('lastname')?.invalid}">
+        <div *ngIf="addForm.get('lastname')?.touched && addForm.get('lastname')?.errors"
+          class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('lastname')?.errors?.['required']">lastName is required</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date Of Birth :</label>
+        <input type="date" id="dob" class="form-control" formControlName="dob"
+          [ngClass]="{'border-red-500': addForm.get('dob')?.touched && addForm.get('dob')?.invalid}">
+        <div *ngIf="addForm.get('dob')?.touched && addForm.get('dob')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('dob')?.errors?.['pastDate']">Enter valid DOB</p>
+        </div>
+        <div *ngIf="addForm.get('dob')?.touched && addForm.get('dob')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('dob')?.errors?.['required']">DOB is Required</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address :</label>
+        <input type="text" id="address" class="form-control" formControlName="address"
+          [ngClass]="{'border-red-500': addForm.get('address')?.touched && addForm.get('address')?.invalid}">
+        <div *ngIf="addForm.get('address')?.touched && addForm.get('dob')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('address')?.errors?.['required']">Address is Required</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="beverages">Beverages:</label>
+        <select class="form-control" id="beverage" formControlName="beverage">
+          <option *ngFor="let option of beverageOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label><br>
+        <select class="form-control" id="gender" formControlName="gender"
+          [ngClass]="{'border-red-500': addForm.get('gender')?.touched && addForm.get('gender')?.invalid}">
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+
+        </select>
+
+        <div *ngIf="addForm.get('gender')?.touched && addForm.get('gender')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('gender')?.errors?.['required']">Gender is Required</p>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="jsskill">JavaScript Skill Range:</label><br>
+        <input type="number" id="jsskill" class="form-control" formControlName="js_skill"
+          [ngClass]="{'border-red-500': addForm.get('js_skill')?.touched && addForm.get('js_skill')?.invalid}">
+        <div *ngIf="addForm.get('js_skill')?.touched && addForm.get('js_skill')?.errors"
+          class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('js_skill')?.errors?.['outOfRange']">Enter number in range 0-100</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Payment Mode:</label>
+        <select class="form-control" id="payment" formControlName="payment">
+          <option value="Card">Card</option>
+          <option value="Cash">Cash</option>
+        </select>
+      </div>
+
+    </div>
+
+    <br><br>
+    <button type="submit" class="btn bg-pink-200 hover:bg-pink-300 shadow-sm outline-purple-400">Save</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-warning">Clear</button>
+    <br><br>
+  </form>
+</div>

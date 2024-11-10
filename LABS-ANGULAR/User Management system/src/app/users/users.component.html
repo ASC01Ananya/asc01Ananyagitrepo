@@ -1,0 +1,54 @@
+<div class="container">
+    <br>
+    <h2 class="font-bold p-10 mb-7 text-5xl font-mono">Users Details</h2>
+    <div>
+        <input
+        class="ml m-5 p-2 w-11/12"
+        type="text"
+        placeholder="Filter by Names"
+        #filter
+        (input)="filterUsers(filter.value)"  
+      />
+        <!-- <input class=" m-5 p-2" type="text" placeholder="Filter by Names" #filter> -->
+        <!-- <button class=" bg-pink-200 p-2" type="button" (click)="filterUsers(filter.value)">Search</button> -->
+        <div class="overflow-x-auto m-10">
+            <table class="min-w-full bg-white border p-10">
+                <thead class="bg-slate-200 text-center">
+                    <tr class="text-center ">
+                        <th >ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Address</th>
+                        <th>Beverages</th>
+                        <th>JS Skill</th>
+                        <th>Payment Mode</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of filteredUsers">
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.dob}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.beverage}}</td>
+                        <td>{{user.js_skill}}</td>
+                        <td>{{user.payment}}</td>
+                        
+                        <td class="p-2"><button class="btn bg-red-200 hover:bg-red-300" (click)="deleteUser(user.id)">Delete</button></td>
+                        <td><button class="btn bg-purple-50 hover:bg-purple-200"(click)="editUser(user)">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
+ 
+
+
+

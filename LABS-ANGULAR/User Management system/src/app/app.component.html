@@ -1,0 +1,27 @@
+<div  class="h-50">
+  <div class="flex-row bg-pink-200 flex justify-between items-center">
+    <ul class="flex">
+      <li class="p-5">
+        
+        <a class="nav-link" routerLink="/">UMS</a>
+      </li>
+      <li class="p-5">
+        <a *ngIf="!loggedIn"class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="loggedIn" class="p-5">
+        <a class="nav-link" routerLink="/form">Add User</a>
+      </li>
+      <li *ngIf="loggedIn" class="p-5">
+        <a class="nav-link" routerLink="/employess">User List</a>
+      </li>
+    </ul>
+
+    <a *ngIf="loggedIn" class="nav-link p-5" (click)="onLogout()"routerLink="/logout">Log Out</a>
+  </div>
+
+  <br>
+  <div class="text-center w-4/6 bg-pink-100 mt-5 h-vh m-auto p-10 rounded-3xl">
+  <router-outlet></router-outlet>
+</div>
+<!-- <app-footer></app-footer> -->
+</div>
