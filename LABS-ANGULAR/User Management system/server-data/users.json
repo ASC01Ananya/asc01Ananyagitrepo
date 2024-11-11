@@ -1,0 +1,27 @@
+{
+    "users": [
+      {
+        "id":1,
+        "name": "Rathna",
+        "lname": "Raju",
+        "dob": "1973-01-09",
+        "address": "Dodballapur",
+        "beverage": "Tea",
+        "gender": "Female",
+        "js_skill": "40",
+        "payment": "Cash"
+      },
+      {
+        "id":2,
+        "name": "Ananya",
+        "lname": "Raju",
+        "dob": "2002-08-29",
+        "address": "Bangalore",
+        "beverage": "Tea",
+        "gender": "Female",
+        "js_skill": "90",
+        "payment": "Cash"
+      }
+    ]
+  }
+  
