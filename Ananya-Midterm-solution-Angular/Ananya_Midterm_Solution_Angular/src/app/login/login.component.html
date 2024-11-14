@@ -1,0 +1,12 @@
+<p class="p-10 font-mono text-5xl">Admin Login</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="bg-blue-50 p-32">
+    <label for="loginid"> Enter the Log In id:
+        <input type="text" id="loginid" formControlName="loginid">
+    </label>
+    <br>
+    <label for="pass"> Enter Password:
+        <input class="ml-7" type="password" id="pass" formControlName="password">
+    </label>
+    <br>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,35 @@
+<div class="h-50">
+  <div class="flex-row bg-blue-200 flex justify-between items-center font-mono">
+    <ul class="flex">
+      <li class="p-5">
+
+        <a class="nav-link" routerLink="/">ITS</a>
+      </li>
+      <li class="p-5">
+        <a *ngIf="!loggedIn" class="nav-link" routerLink="/login">Login </a>
+      </li>
+      <li *ngIf="loggedIn" class="p-5">
+        <a class="nav-link" routerLink="/form">Add Issue</a>
+      </li>
+      <li *ngIf="loggedIn" class="p-5">
+        <a class="nav-link" routerLink="/issues">Issue List</a>
+      </li>
+    </ul>
+
+    <a *ngIf="loggedIn" class="nav-link p-5" (click)="onLogout()" routerLink="/logout">Log Out</a>
+  </div>
+
+  <br>
+  <div class="text-center w-4/6 bg-blue-100 mt-5 h-vh m-auto p-10 rounded-3xl">
+    <h3 class="text-center font-mono text-5xl"> Welcome to ITS !</h3>
+    <router-outlet></router-outlet>
+  </div>
+  <!-- <app-footer></app-footer> -->
+  <!-- <app-footer style="position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: pink;
+ /* color: white; */
+ text-align: center;"></app-footer> -->
+</div>

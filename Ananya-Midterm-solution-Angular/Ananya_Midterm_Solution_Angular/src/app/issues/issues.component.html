@@ -1,0 +1,45 @@
+<!-- <p>issues works!</p> -->
+<div class="container">
+    <br>
+    <h2 class="font-bold p-10 mb-7 text-5xl font-mono">Issues Details</h2>
+    <div>
+        <input class="ml m-5 p-2 w-11/12" type="text" placeholder="Filter by Names" #filter
+            (input)="filterIssues(filter.value)" />
+
+
+        <div class="overflow-x-auto m-10">
+            <table class="min-w-full  bg-white border p-16 ">
+                <thead class="bg-slate-400  text-justify">
+                    <tr class=" text-center">
+                        <th class="text-center">Issue ID</th>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Priority</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Assignee</th>
+                        <th class="text-center">Date</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let issue of filteredIssues">
+                        <td>{{issue.id}}</td>
+                        <td>{{issue.title}}</td>
+                        <td>{{issue.desc}}</td>
+                        <td>{{issue.priority}}</td>
+                        <td>{{issue.status}}</td>
+                        <td>{{issue.Assign}}</td>
+                        <td>{{issue.Date}}</td>
+
+                        <td class="p-2"><button class="btn bg-slate-200 hover:bg-slate-300"
+                                (click)="deleteIssue(issue.id)">Delete</button></td>
+                        <td><button class="btn bg-purple-50 hover:bg-purple-200"
+                                (click)="editIssue(issue)">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

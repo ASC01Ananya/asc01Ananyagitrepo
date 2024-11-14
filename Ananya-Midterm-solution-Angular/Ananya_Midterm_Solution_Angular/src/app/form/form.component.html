@@ -1,0 +1,84 @@
+<div class="container" style="width:500px">
+  <br>
+  <h2 style="text-align: center;" class="font-mono text-5xl ">{{operation}} User</h2> <br>
+  <form class="text-left" [formGroup]="addForm" (ngSubmit)="saveIssue()">
+    <div>
+      <div class="form-group">
+        <label for="id">Id :</label>
+        <input type="text" id="id" class="form-control" formControlName="id">
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title :</label>
+        <input type="text" id="title" class="form-control" formControlName="title"
+          [ngClass]="{'border-red-500': addForm.get('title')?.touched && addForm.get('title')?.invalid}">
+        <div *ngIf="addForm.get('title')?.touched && addForm.get('title')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('title')?.errors?.['required']">Title is required</p>
+        </div>
+        <div *ngIf="addForm.get('title')?.touched && addForm.get('title')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('title')?.errors?.['minlength']">Title should be of atleast of 3 characters</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="desc">Description :</label>
+        <input type="text" id="desc" class="form-control" formControlName="desc"
+          [ngClass]="{'border-red-500': addForm.get('desc')?.touched && addForm.get('desc')?.invalid}">
+        <div *ngIf="addForm.get('desc')?.touched && addForm.get('desc')?.errors" class="text-red-400 text-xl mt-2">
+          <p *ngIf="addForm.get('desc')?.errors?.['required']">description is required</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="pri">Priority:</label>
+      <select class="form-control" id="pri" formControlName="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select class="form-control" id="status" formControlName="status">
+        <option value="Open">Open</option>
+        <option value="In progress">In Progress</option>
+        <option value="Resolved">Resolved</option>
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="assign">Assign To :</label>
+      <input type="text" id="Assign" class="form-control" formControlName="Assign"
+        [ngClass]="{'border-red-500': addForm.get('Assign')?.touched && addForm.get('Assign')?.invalid}">
+      <div *ngIf="addForm.get('Assign')?.touched && addForm.get('Assign')?.errors" class="text-red-400 text-xl mt-2">
+        <p *ngIf="addForm.get('Assign')?.errors?.['required']">Issues should be Assigned!</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date Of Birth :</label>
+      <input type="date" id="date" class="form-control" formControlName="Date"
+        [ngClass]="{'border-red-500': addForm.get('Date')?.touched && addForm.get('Date')?.invalid}">
+      <div *ngIf="addForm.get('Date')?.touched && addForm.get('Date')?.errors" class="text-red-400 text-xl mt-2">
+        <p *ngIf="addForm.get('Date')?.errors?.['pastDate']">Enter valid Date</p>
+      </div>
+      <div *ngIf="addForm.get('Date')?.touched && addForm.get('Date')?.errors" class="text-red-400 text-xl mt-2">
+        <p *ngIf="addForm.get('date')?.errors?.['required']">Date cant be in future</p>
+      </div>
+    </div>
+
+
+    <br><br>
+    <button type="submit" class="btn bg-blue-200 hover:bg-blue-300 shadow-sm outline-purple-400">Save</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-warning">Clear</button>
+    <br><br>
+  </form>
+</div>
